@@ -21,7 +21,7 @@ import re
 import base64
 from info import *
 import traceback
-from pyrogram.errors.exceptions.bad_request_400 
+from pyrogram.errors.exceptions.bad_request_400
 import MessageTooLong
 logger = logging.getLogger(__name__)
 movie_series_db = JsTopDB(DATABASE_URI)
