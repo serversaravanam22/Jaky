@@ -1,6 +1,7 @@
 import re
 from os import environ,getenv
 from Script import script
+import os
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
@@ -18,15 +19,15 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '-1002473385674').split()]
 USERNAME = environ.get('USERNAME', "https://t.me/") # ADMIN USERNAME
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002473385674'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/JisshuMovieZone')
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002473385674').split()]
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://ganeshganesh177:17032009@sasukeuchiha.k21bh.mongodb.net/?retryWrites=true&w=majority&appName=Sasukeuchiha")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Sasukeuchiha")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'My_Tg_files')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
@@ -164,3 +165,12 @@ cmds = [
     {"grp_cmds": "Check Group Commands"},
     {"admin_cmds": "Bot Admin Commands"}
 ]
+
+#Newfeatures vars developer - Anshvachhani99 ✨🌸
+DIRECT_GEN_DB = int(os.environ.get("DIRECT_GEN_DB", "-1002473385674"))
+DIRECT_GEN_URL = os.environ.get("DIRECT_GEN_URL", "jeevanmoviessbot.koyeb.app/")
+DIRECT_GEN = bool(DIRECT_GEN_DB and DIRECT_GEN_URL)
+POST_MODE= bool(environ.get('POST_MODE', True))
+POST_SHORT_API = environ.get('POST_SHORT_API', 'bcb93413e5dd9aaf092ab03269420e6f928aae2c')
+POST_SHORT_URL = environ.get('POST_SHORT_URL', 'publicearn.com')
+HOW_TO_POST_SHORT = environ.get('HOW_TO_POST_SHORT', 'https://t.me/How_To_Get_Movie')
