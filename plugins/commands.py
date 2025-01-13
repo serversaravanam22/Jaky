@@ -1232,10 +1232,7 @@ async def handle_message(client, message):
                     stream_links_info.append(f"》{user_states[chat_id]['file_sizes'][i]} : {short_stream_link_url}")
                 
                 stream_links_text = "\n\n".join(stream_links_info)                
-                # Ensure variables are defined
-HOW_TO_POST_SHORT = "https://example.com/how-to-post"
-poster = "https://telegra.ph/file/74707bb075903640ed3f6.jpg"
-
+                
 # Safely format the summary message
 summary_message = (
     f"**🎬{title} Tamil HDRip**\n\n"
