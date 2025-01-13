@@ -9,7 +9,7 @@ from datetime import datetime as dt
 from Script import script
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup , ForceReply, ReplyKeyboardMarkup, HOW_TO_POST_SHORT, ADMINS, DIRECT_GEN_DB
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup , ForceReply, ReplyKeyboardMarkup, ADMINS, DIRECT_GEN_DB
 from database.ia_filterdb import Media, get_file_details, get_bad_files, unpack_new_file_id, gen_link, clean_title, get_poster, temp, short_link
 from database.users_chats_db import db
 from database.config_db import mdb
