@@ -1232,7 +1232,30 @@ async def handle_message(client, message):
                     stream_links_info.append(f"》{user_states[chat_id]['file_sizes'][i]} : {short_stream_link_url}")
                 
                 stream_links_text = "\n\n".join(stream_links_info)                
-                summary_message = f"**🎬{title} Tamil HDRip**\n\n**[ 𝟹𝟼𝟶ᴘ☆𝟺𝟾𝟶ᴘ☆Hᴇᴠᴄ☆𝟽𝟸𝟶ᴘ☆𝟷𝟶𝟾𝟶ᴘ ]✌**\n\n**𓆩🔻𓆪 Dɪʀᴇᴄᴛ Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇs Oɴʟʏ👇**\n\n**{file_info_text}**\n\n**✅ Note : [Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ]({HOW_TO_POST_SHORT})👀**\n\n**𓆩🔻𓆪 Sᴛʀᴇᴀᴍ/Fᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 👇**\n\n**{stream_links_text}**\n\n**✅ Note : [Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ]({HOW_TO_POST_SHORT})👀**\n\n**⚡ 𝐉𝐨𝐢𝐧 ➟ : <a href="https://t.me/Movieprovidergroups"><b>Mᴏᴠɪᴇs Rᴇǫᴜᴇsᴛ 𝟸𝟺×𝟽</b></a>**\n\n**❤️‍🔥ー𖤍 𓆩 Sʜᴀʀᴇ Wɪᴛʜ Fʀɪᴇɴᴅs 𓆪 𖤍ー❤️‍🔥**"
+                # Ensure variables are defined
+HOW_TO_POST_SHORT = "https://example.com/how-to-post"
+poster = "https://telegra.ph/file/74707bb075903640ed3f6.jpg"
+
+# Safely format the summary message
+summary_message = (
+    f"**🎬{title} Tamil HDRip**\n\n"
+    f"**[ 𝟹𝟼𝟶ᴘ☆𝟺𝟾𝟶ᴘ☆Hᴇᴠᴄ☆𝟽𝟸𝟶ᴘ☆𝟷𝟶𝟾𝟶ᴘ ]✌**\n\n"
+    f"**𓆩🔻𓆪 Dɪʀᴇᴄᴛ Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇs Oɴʟʏ👇**\n\n"
+    f"**{file_info_text}**\n\n"
+    f"**✅ Note : [Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ]({HOW_TO_POST_SHORT})👀**\n\n"
+    f"**𓆩🔻𓆪 Sᴛʀᴇᴀᴍ/Fᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 👇**\n\n"
+    f"**{stream_links_text}**\n\n"
+    f"**✅ Note : [Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ]({HOW_TO_POST_SHORT})👀**\n\n"
+    f"**⚡ 𝐉𝐨𝐢𝐧 ➟ : <a href=\"https://t.me/Movieprovidergroups\"><b>Mᴏᴠɪᴇs Rᴇǫᴜᴇsᴛ 𝟸𝟺×𝟽</b></a>**\n\n"
+    f"**❤️‍🔥ー𖤍 𓆩 Sʜᴀʀᴇ Wɪᴛʜ Fʀɪᴇɴᴅs 𓆪 𖤍ー❤️‍🔥**"
+)
+
+# Send response
+if poster:
+    await message.reply_photo(poster, caption=summary_message)
+else:
+    await message.reply(summary_message)
+    
                 summary_messages = f"{title_clean}, {cleaned_title}"
                 if poster:
                     await message.reply_photo(poster, caption=summary_message)
