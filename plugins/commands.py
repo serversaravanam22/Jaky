@@ -9,7 +9,7 @@ from datetime import datetime as dt
 from Script import script
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup , ForceReply, ReplyKeyboardMarkup, ADMINS, DIRECT_GEN_DB
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup , ForceReply, ReplyKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, get_bad_files, unpack_new_file_id, gen_link, clean_title, get_poster, temp, short_link
 from database.users_chats_db import db
 from database.config_db import mdb
@@ -24,7 +24,7 @@ import traceback
 import pyrogram.errors.exceptions.bad_request_400
 import MessageTooLong
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, ReplyKeyboardMarkup
-from config import HOW_TO_POST_SHORT, ADMINS, DIRECT_GEN_DB  # Adjust based on where you define these
+  # Adjust based on where you define these
 
 logger = logging.getLogger(__name__)
 movie_series_db = JsTopDB(DATABASE_URI)
