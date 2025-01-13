@@ -23,6 +23,9 @@ from info import *
 import traceback
 import pyrogram.errors.exceptions.bad_request_400
 import MessageTooLong
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, ReplyKeyboardMarkup
+from config import HOW_TO_POST_SHORT, ADMINS, DIRECT_GEN_DB  # Adjust based on where you define these
+
 logger = logging.getLogger(__name__)
 movie_series_db = JsTopDB(DATABASE_URI)
 verification_ids = {}
